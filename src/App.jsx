@@ -11,7 +11,7 @@ function App() {
     <div
       style={{
         scrollBehavior: "smooth",
-        scrollSnapType: "y mandatory", // enables snap
+        scrollSnapType: "y mandatory",
         overflowY: "scroll",
         height: "100vh",
       }}
@@ -41,8 +41,9 @@ function App() {
         <Contact />
       </section>
 
-      {/* Bottom Floating Navbar */}
+      {/* Floating Navbar */}
       <nav
+        className="floating-nav"
         style={{
           position: "fixed",
           bottom: "24px",
@@ -94,6 +95,33 @@ function App() {
           </a>
         ))}
       </nav>
+
+      {/* Inline CSS for responsiveness */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .floating-nav {
+              bottom: 12px;
+              padding: 0.5rem 1rem;
+              gap: 1rem;
+            }
+            .floating-nav a {
+              font-size: 0.8rem !important;
+              padding: 0.2rem 0.4rem !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .floating-nav {
+              gap: 0.6rem;
+              padding: 0.4rem 0.8rem;
+            }
+            .floating-nav a {
+              font-size: 0.7rem !important;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }
