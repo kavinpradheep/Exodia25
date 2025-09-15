@@ -135,7 +135,7 @@ function DayTimeline({ title, events }) {
 
 export default function Timeline() {
   return (
-    <section style={{ background: "#00111b", color: "white", padding: "36px 16px" }}>
+    <section id="timeline" style={{ background: "#00111b", color: "white", padding: "36px 16px" }}>
       <div style={{ maxWidth: 1050, margin: "0 auto" }}>
         <h2
           style={{
