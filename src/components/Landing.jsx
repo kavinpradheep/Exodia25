@@ -28,17 +28,19 @@ export default function Landing() {
 
   return (
     <section
-      id="landing"
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#000F1F",
-        color: "white",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+  id="landing"
+  style={{
+    minHeight: "100vh",
+    backgroundColor: "#000F1F",
+    color: "white",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start", // push towards top
+    paddingTop: "60px", // adjust this to control how high
+  }}
+>
+
       <img
         src={eventImage}
         alt="EXODIA Event"

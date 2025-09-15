@@ -8,42 +8,92 @@ import Events from "./components/EventsRegistration";
 
 function App() {
   return (
-    <div style={{ scrollBehavior: "smooth" }}>
-      <Landing />
-      <About />
-      <Sponsors />
-      <Events />
-      <Timeline />
-      <Contact />
+    <div
+      style={{
+        scrollBehavior: "smooth",
+        scrollSnapType: "y mandatory", // enables snap
+        overflowY: "scroll",
+        height: "100vh",
+      }}
+    >
+      {/* Each section snaps */}
+      <section id="landing" style={{ scrollSnapAlign: "start" }}>
+        <Landing />
+      </section>
 
-      {/* Bottom Navbar */}
-            {/* Bottom Floating Navbar */}
+      <section id="about" style={{ scrollSnapAlign: "start" }}>
+        <About />
+      </section>
+
+      <section id="sponsors" style={{ scrollSnapAlign: "start" }}>
+        <Sponsors />
+      </section>
+
+      <section id="events" style={{ scrollSnapAlign: "start" }}>
+        <Events />
+      </section>
+
+      <section id="timeline" style={{ scrollSnapAlign: "start" }}>
+        <Timeline />
+      </section>
+
+      <section id="contact" style={{ scrollSnapAlign: "start" }}>
+        <Contact />
+      </section>
+
+      {/* Bottom Floating Navbar */}
       <nav
         style={{
           position: "fixed",
-          bottom: "20px",
+          bottom: "24px",
           left: "50%",
           transform: "translateX(-50%)",
-          backgroundColor: "#000F1F",
-          color: "white",
-          padding: "0.75rem 2rem",
+          background: "rgba(0, 15, 31, 0.65)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          padding: "0.7rem 2.2rem",
           display: "flex",
           justifyContent: "center",
-          gap: "2rem",
-          borderRadius: "9999px", // full rounded like Mac dock
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-          zIndex: 50,
-          border: "1px solid #00D4FF",
+          gap: "2.5rem",
+          borderRadius: "9999px",
+          boxShadow: "0 8px 25px rgba(0, 0, 0, 0.4)",
+          zIndex: 100,
+          border: "1px solid rgba(255, 255, 255, 0.15)",
         }}
       >
-        <a href="#landing" style={{ color: "white", textDecoration: "none" }}>Home</a>
-        <a href="#about" style={{ color: "white", textDecoration: "none" }}>About</a>
-        <a href="#sponsors" style={{ color: "white", textDecoration: "none" }}>Sponsors</a>
-        <a href="#events" style={{ color: "white", textDecoration: "none" }}>Events</a>
-        <a href="#timeline" style={{ color: "white", textDecoration: "none" }}>Timeline</a>
-        <a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contact</a>
+        {[
+          { id: "landing", label: "Home" },
+          { id: "about", label: "About" },
+          { id: "sponsors", label: "Sponsors" },
+          { id: "events", label: "Events" },
+          { id: "timeline", label: "Timeline" },
+          { id: "contact", label: "Contact" },
+        ].map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            style={{
+              color: "white",
+              textDecoration: "none",
+              fontSize: "1rem",
+              fontWeight: "500",
+              transition: "all 0.25s ease-in-out",
+              padding: "0.3rem 0.6rem",
+              borderRadius: "8px",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.color = "#00D4FF";
+              e.target.style.transform = "scale(1.15)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = "white";
+              e.target.style.transform = "scale(1)";
+            }}
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
-
     </div>
   );
 }
