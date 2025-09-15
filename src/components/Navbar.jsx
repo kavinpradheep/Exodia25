@@ -78,15 +78,23 @@ const Navbar = () => {
     <>
       <nav ref={containerRef} className="floating-nav">
         {navItems.map((item, i) => (
-          <a
-            key={item.id}
-            href={`#${item.id}`}
-            className="nav-icon"
-            ref={(el) => (iconRefs.current[i] = el)}
-          >
-            {item.icon}
-          </a>
-        ))}
+        <a
+          key={item.id}
+          href={`#${item.id}`}
+          className="nav-icon"
+          ref={(el) => (iconRefs.current[i] = el)}
+          onClick={(e) => {
+            e.preventDefault(); // prevent URL from changing
+            const section = document.getElementById(item.id);
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+            }
+          }}
+        >
+          {item.icon}
+        </a>
+      ))}
+
       </nav>
 
       <style>
