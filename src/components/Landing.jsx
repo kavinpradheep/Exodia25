@@ -46,7 +46,7 @@ export default function Landing() {
         alt="EXODIA Event"
         style={{ width: "400px", marginBottom: "2rem" }}
       />
-      <h2 style={{ marginBottom: "2rem" }}>Game Starts Soon!!!</h2>
+      <h2 style={{ marginBottom: "2rem" }}>Get Ready for EXODIA'25!</h2>
 
       <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
         {["Days", "Hours", "Minutes", "Seconds"].map((label) => (
@@ -75,7 +75,7 @@ export default function Landing() {
       </div>
 
       <a
-        href="#about"
+        href="#events"
         style={{
           backgroundColor: "#00D4FF",
           color: "#000F1F",
