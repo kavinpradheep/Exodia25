@@ -2,8 +2,12 @@ import { useState } from "react";
 
 export default function EventsRegistration() {
   const [selectedDay, setSelectedDay] = useState("day1");
+  const [activeCard, setActiveCard] = useState(null);
 
-  // 🎯 Events structured by days (with rules from PDF)
+  // Helper to check if mobile view
+  const isMobile = () => window.innerWidth <= 768;
+
+  // 🎯 Events structured by days
   const events = {
     day1: {
       technical: [
@@ -151,6 +155,7 @@ export default function EventsRegistration() {
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            cursor: pointer;
           }
           .event-card:hover {
             transform: scale(1.05);
@@ -172,6 +177,11 @@ export default function EventsRegistration() {
             font-size: 0.85rem;
           }
           .event-card:hover .event-back { opacity: 1; }
+          .event-card.active .event-back {
+            opacity: 1;
+            display: flex;
+            position: relative;
+          }
           .rules {
             flex: 1;
             overflow-y: auto;
@@ -198,6 +208,22 @@ export default function EventsRegistration() {
             font-weight: bold;
             margin-top: 1rem;
             align-self: center;
+          }
+
+          @media (max-width: 768px) {
+            .event-card {
+              height: auto;
+            }
+            .event-front, .event-back {
+              position: relative;
+              opacity: 1 !important;
+            }
+            .event-back {
+              display: none;
+            }
+            .event-card.active .event-back {
+              display: flex;
+            }
           }
         `}
       </style>
@@ -244,8 +270,15 @@ export default function EventsRegistration() {
         </h3>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
           {currentDayEvents.technical.map((event, index) => (
-            <div key={index} className="event-card">
-              {/* Front */}
+            <div
+              key={index}
+              className={`event-card ${activeCard === event.name ? "active" : ""}`}
+              onClick={() => {
+                if (isMobile()) {
+                  setActiveCard(activeCard === event.name ? null : event.name);
+                }
+              }}
+            >
               <div className="event-front">
                 <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{event.icon}</div>
                 <h4>{event.name}</h4>
@@ -253,7 +286,6 @@ export default function EventsRegistration() {
                 <p><strong>Fee:</strong> {event.fee}</p>
                 <p><strong>Duration:</strong> {event.duration}</p>
               </div>
-              {/* Back */}
               <div className="event-back">
                 <div className="rules">
                   <p><strong>Description:</strong> {event.description}</p>
@@ -280,8 +312,15 @@ export default function EventsRegistration() {
         </h3>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
           {currentDayEvents.nontechnical.map((event, index) => (
-            <div key={index} className="event-card">
-              {/* Front */}
+            <div
+              key={index}
+              className={`event-card ${activeCard === event.name ? "active" : ""}`}
+              onClick={() => {
+                if (isMobile()) {
+                  setActiveCard(activeCard === event.name ? null : event.name);
+                }
+              }}
+            >
               <div className="event-front">
                 <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{event.icon}</div>
                 <h4>{event.name}</h4>
@@ -289,7 +328,6 @@ export default function EventsRegistration() {
                 <p><strong>Fee:</strong> {event.fee}</p>
                 <p><strong>Duration:</strong> {event.duration}</p>
               </div>
-              {/* Back */}
               <div className="event-back">
                 <div className="rules">
                   <p><strong>Description:</strong> {event.description}</p>
@@ -315,8 +353,15 @@ export default function EventsRegistration() {
           Hackathon
         </h3>
         <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
-          <div className="event-card" style={{ width: "300px", height: "360px" }}>
-            {/* Front */}
+          <div
+            className={`event-card ${activeCard === "hackathon" ? "active" : ""}`}
+            style={{ width: "300px" }}
+            onClick={() => {
+              if (isMobile()) {
+                setActiveCard(activeCard === "hackathon" ? null : "hackathon");
+              }
+            }}
+          >
             <div className="event-front">
               <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>{hackathonEvent.icon}</div>
               <h4>{hackathonEvent.name}</h4>
@@ -324,7 +369,6 @@ export default function EventsRegistration() {
               <p><strong>Fee:</strong> {hackathonEvent.fee}</p>
               <p><strong>Duration:</strong> {hackathonEvent.duration}</p>
             </div>
-            {/* Back */}
             <div className="event-back">
               <div className="rules">
                 <p><strong>Description:</strong> {hackathonEvent.description}</p>

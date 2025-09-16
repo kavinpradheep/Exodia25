@@ -2,27 +2,37 @@ import React from "react";
 import { FaUser, FaCoffee, FaCogs, FaLaptopCode, FaComments } from "react-icons/fa";
 
 const HOURS_START = 8;
-const HOURS_END = 15; // extended till 3pm
+const HOURS_END = 17; // up to 5 PM
 const hours = Array.from({ length: HOURS_END - HOURS_START + 1 }, (_, i) => HOURS_START + i);
 
 const ROW_HEIGHT = 64;
 const GAP = 10;
 
+/* 🟢 DAY 1 TIMELINE */
 const day1Events = [
-  { name: "Inauguration", start: 8, end: 9, color: "#B22222", icon: <FaUser /> },
-  { name: "Workshop A", start: 9, end: 11, color: "#6A0DAD", icon: <FaCogs /> },
-  { name: "Panel Discussion", start: 10, end: 11, color: "#1E90FF", icon: <FaComments /> },
-  { name: "Coding Challenge", start: 11, end: 13, color: "#008B8B", icon: <FaLaptopCode /> },
-  { name: "Lunch", start: 13, end: 14, color: "#DAA520", icon: <FaCoffee /> },
+  { name: "Inaugural", start: 9, end: 9.75, color: "#B22222", icon: <FaUser /> }, // 9:00 – 9:45
+  { name: "Instruction & Refreshments", start: 9.75, end: 10.25, color: "#6A0DAD", icon: <FaCoffee /> }, // 9:45 – 10:15
+  { name: "Paper Presentation", start: 10.5, end: 12.333, color: "#1E90FF", icon: <FaComments /> }, // 10:30 – 12:20
+  { name: "Flash Clash", start: 13.5, end: 14.25, color: "#008B8B", icon: <FaLaptopCode /> }, // 1:30 – 2:15
+  { name: "ProCoder", start: 14.5, end: 16.25, color: "#DAA520", icon: <FaCogs /> }, // 2:30 – 4:15
+  { name: "Circuitrix", start: 14.5, end: 16.25, color: "#FF4500", icon: <FaLaptopCode /> }, // 2:30 – 4:15
 ];
 
+/* 🟢 DAY 2 TIMELINE */
 const day2Events = [
-  { name: "Inauguration", start: 8, end: 9, color: "#B22222", icon: <FaUser /> },
-  { name: "Tech Quiz", start: 9, end: 10, color: "#1E90FF", icon: <FaComments /> },
-  { name: "Hackathon Start", start: 10, end: 13, color: "#008B8B", icon: <FaLaptopCode /> },
-  { name: "Networking", start: 11, end: 12, color: "#6A0DAD", icon: <FaCogs /> },
-  { name: "Lunch", start: 13, end: 14, color: "#DAA520", icon: <FaCoffee /> },
+  { name: "Core Clash", start: 9, end: 10.75, color: "#B22222", icon: <FaLaptopCode /> }, // 9:00 – 10:45
+  { name: "Soul Sync", start: 11, end: 12.5, color: "#6A0DAD", icon: <FaComments /> }, // 11:00 – 12:30
+  { name: "IPL Auction", start: 13.5, end: 14.5, color: "#008B8B", icon: <FaLaptopCode /> }, // 1:30 – 2:30
+  { name: "Valedictory", start: 15, end: 16, color: "#DAA520", icon: <FaUser /> }, // 3:00 – 4:00
 ];
+
+/* 🕒 Format hours to 12hr clock */
+function formatHour(hour) {
+  let h = Math.floor(hour);
+  let suffix = h >= 12 ? "PM" : "AM";
+  let displayHour = h % 12 === 0 ? 12 : h % 12;
+  return `${displayHour}:00 ${suffix}`;
+}
 
 function DayTimeline({ title, events }) {
   const rows = 3;
@@ -30,11 +40,11 @@ function DayTimeline({ title, events }) {
 
   const gridStyle = {
     display: "grid",
-    gridTemplateColumns: `repeat(${hours.length}, 120px)`, // fixed width per hour (scrollable on mobile)
+    gridTemplateColumns: `repeat(${hours.length}, 120px)`,
     gridTemplateRows: `repeat(${rows}, ${ROW_HEIGHT}px)`,
     gap: `${GAP}px`,
     position: "relative",
-    minWidth: `${hours.length * 120}px`, // ensures scroll width
+    minWidth: `${hours.length * 120}px`,
   };
 
   return (
@@ -46,14 +56,14 @@ function DayTimeline({ title, events }) {
         marginBottom: 28,
         background: "rgba(5,18,30,0.45)",
         boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.2)",
-        overflowX: "auto", // enable scroll
+        overflowX: "auto",
       }}
     >
       <div style={{ color: "#00D4FF", fontWeight: 700, marginBottom: 12, fontSize: 16 }}>
         {title}
       </div>
 
-      {/* Hours labels (scrollable too) */}
+      {/* Hours labels in 12hr format */}
       <div style={{ display: "flex", marginBottom: 10, minWidth: `${hours.length * 120}px` }}>
         {hours.map((h) => (
           <div
@@ -66,14 +76,13 @@ function DayTimeline({ title, events }) {
               fontWeight: 600,
             }}
           >
-            {h}:00
+            {formatHour(h)}
           </div>
         ))}
       </div>
 
       {/* Events Grid */}
       <div style={{ position: "relative", minWidth: `${hours.length * 120}px` }}>
-        {/* Vertical lines */}
         {hours.map((_, i) => {
           const left = i * 120;
           return (
@@ -94,8 +103,8 @@ function DayTimeline({ title, events }) {
 
         <div style={gridStyle}>
           {events.map((ev, i) => {
-            const colStart = ev.start - HOURS_START + 1;
-            const colEnd = Math.max(ev.end - HOURS_START + 1, colStart + 1);
+            const colStart = Math.floor(ev.start) - HOURS_START + 1;
+            const colEnd = Math.ceil(ev.end) - HOURS_START + 1;
             const row = (i % 3) + 1;
 
             return (
