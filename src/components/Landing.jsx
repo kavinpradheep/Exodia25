@@ -26,21 +26,27 @@ export default function Landing() {
     return () => clearInterval(timer);
   }, []);
 
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
-  id="landing"
-  style={{
-    minHeight: "100vh",
-    backgroundColor: "#000F1F",
-    color: "white",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "flex-start", // push towards top
-    paddingTop: "60px", // adjust this to control how high
-  }}
->
-
+      id="landing"
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#000F1F",
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        paddingTop: "60px",
+      }}
+    >
       <img
         src={eventImage}
         alt="EXODIA Event"
@@ -74,18 +80,20 @@ export default function Landing() {
         ))}
       </div>
 
-      <a
-        href="#events"
+      <button
+        onClick={scrollToAbout}
         style={{
           backgroundColor: "#00D4FF",
           color: "#000F1F",
           padding: "10px 20px",
           borderRadius: "5px",
-          textDecoration: "none",
+          border: "none",
+          cursor: "pointer",
+          fontWeight: "bold",
         }}
       >
         Register Now
-      </a>
+      </button>
     </section>
   );
 }
