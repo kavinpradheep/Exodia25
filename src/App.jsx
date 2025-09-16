@@ -5,39 +5,39 @@ import Sponsors from "./components/Sponsors";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Events from "./components/EventsRegistration";
-import Navbar from "./components/Navbar"; // ✅ Import navbar
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div
       style={{
         scrollBehavior: "smooth",
-        scrollSnapType: "y mandatory",
         overflowY: "scroll",
         height: "100vh",
+        WebkitOverflowScrolling: "touch", // ✅ momentum scrolling
       }}
     >
       {/* Sections */}
-      <section id="landing" style={{ scrollSnapAlign: "start" }}>
+      <section id="landing">
         <Landing />
       </section>
-      <section id="about" style={{ scrollSnapAlign: "start" }}>
+      <section id="about">
         <About />
       </section>
-      <section id="sponsors" style={{ scrollSnapAlign: "start" }}>
+      <section id="sponsors">
         <Sponsors />
       </section>
-      <section id="events" style={{ scrollSnapAlign: "start" }}>
+      <section id="events">
         <Events />
       </section>
-      <section id="timeline" style={{ scrollSnapAlign: "start" }}>
+      <section id="timeline">
         <Timeline />
       </section>
-      <section id="contact" style={{ scrollSnapAlign: "start" }}>
+      <section id="contact">
         <Contact />
       </section>
 
-      {/* ✅ Navbar separated */}
+      {/* ✅ Navbar */}
       <Navbar />
     </div>
   );

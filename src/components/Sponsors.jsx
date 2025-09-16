@@ -9,13 +9,54 @@ export default function Sponsors() {
         padding: "5rem 2rem",
         backgroundColor: "#000F1F",
         textAlign: "center",
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
+      {/* ✅ Heading stays at top */}
       <h2 style={{ fontSize: "3rem", marginBottom: "2rem" }}>Our Sponsors</h2>
-      <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap" }}>
-        <img src="/sponsor1.png" alt="Sponsor1" style={{ height: "80px" }} />
-        <img src="/sponsor2.png" alt="Sponsor2" style={{ height: "80px" }} />
-        <img src="/sponsor3.png" alt="Sponsor3" style={{ height: "80px" }} />
+
+      {/* ✅ Sponsors centered in remaining space */}
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "3rem",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* ✅ Sponsor 1 */}
+        <div style={{ textAlign: "center" }}>
+          <img
+            src="../assets/CelebrateX_Events.png"
+            alt="CelebrateX Events"
+            style={{ height: "180px" }}
+          />
+          <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>CelebrateX Events</p>
+        </div>
+
+        {/* ✅ Sponsor 2 */}
+        <div style={{ textAlign: "center" }}>
+          <img
+            src="../assets/Vanitha_Photography.png"
+            alt="Vanitha Photography"
+            style={{ height: "180px" }}
+          />
+          <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>Vanitha Photography</p>
+        </div>
+
+        {/* ✅ Sponsor 3 */}
+        <div style={{ textAlign: "center" }}>
+          <img
+            src="../assets/CelebrateX_Events.png"
+            alt="CelebrateX Events"
+            style={{ height: "180px" }}
+          />
+          <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>CelebrateX Events</p>
+        </div>
       </div>
     </section>
   );
