@@ -1,42 +1,54 @@
 import React from "react";
-import { FaUser, FaCoffee, FaCogs, FaLaptopCode, FaComments } from "react-icons/fa";
+import { FaUser, FaCoffee, FaCogs, FaLaptopCode, FaComments, FaRocket } from "react-icons/fa";
 
 const HOURS_START = 8;
-const HOURS_END = 17; // up to 5 PM
+const HOURS_END = 18; // extended to fit last event
 const hours = Array.from({ length: HOURS_END - HOURS_START + 1 }, (_, i) => HOURS_START + i);
 
 const ROW_HEIGHT = 64;
 const GAP = 10;
 
-/* 🟢 DAY 1 TIMELINE */
-const day1Events = [
-  { name: "Inaugural", start: 9, end: 9.75, color: "#B22222", icon: <FaUser /> }, // 9:00 – 9:45
-  { name: "Instruction & Refreshments", start: 9.75, end: 10.25, color: "#6A0DAD", icon: <FaCoffee /> }, // 9:45 – 10:15
-  { name: "Paper Presentation", start: 10.5, end: 12.333, color: "#1E90FF", icon: <FaComments /> }, // 10:30 – 12:20
-  { name: "Flash Clash", start: 13.5, end: 14.25, color: "#008B8B", icon: <FaLaptopCode /> }, // 1:30 – 2:15
-  { name: "ProCoder", start: 14.5, end: 16.25, color: "#DAA520", icon: <FaCogs /> }, // 2:30 – 4:15
-  { name: "Circuitrix", start: 14.5, end: 16.25, color: "#FF4500", icon: <FaLaptopCode /> }, // 2:30 – 4:15
+const events = [
+  { name: "Inaugural", start: 9, end: 9.75, color: "#B22222", icon: <FaUser /> },
+  { name: "Instruction & Refreshments", start: 9.75, end: 10.25, color: "#6A0DAD", icon: <FaCoffee /> },
+  { name: "Paper Presentation", start: 10.5, end: 12.333, color: "#1E90FF", icon: <FaComments /> },
+  { name: "Flash Clash", start: 13.5, end: 14.25, color: "#008B8B", icon: <FaLaptopCode /> },
+  { name: "ProCoder", start: 14.5, end: 16.25, color: "#DAA520", icon: <FaCogs /> },
+  { name: "Circuitrix", start: 14.5, end: 16.25, color: "#FF4500", icon: <FaLaptopCode /> },
+  { name: "Core Clash", start: 12.5, end: 14.25, color: "#B22222", icon: <FaLaptopCode /> },
+  { name: "Soul Sync", start: 14.5, end: 16, color: "#6A0DAD", icon: <FaComments /> },
+  { name: "IPL Auction", start: 16.25, end: 17.25, color: "#008B8B", icon: <FaLaptopCode /> },
+  { name: "Valedictory", start: 17, end: 18, color: "#DAA520", icon: <FaUser /> },
+  { name: "Hackathon 30-Hour Challenge", start: 9.75, end: 10.25, color: "#00FFAA", icon: <FaRocket /> },
 ];
 
-/* 🟢 DAY 2 TIMELINE */
-const day2Events = [
-  { name: "Core Clash", start: 9, end: 10.75, color: "#B22222", icon: <FaLaptopCode /> }, // 9:00 – 10:45
-  { name: "Soul Sync", start: 11, end: 12.5, color: "#6A0DAD", icon: <FaComments /> }, // 11:00 – 12:30
-  { name: "IPL Auction", start: 13.5, end: 14.5, color: "#008B8B", icon: <FaLaptopCode /> }, // 1:30 – 2:30
-  { name: "Valedictory", start: 15, end: 16, color: "#DAA520", icon: <FaUser /> }, // 3:00 – 4:00
-];
-
-/* 🕒 Format hours to 12hr clock */
 function formatHour(hour) {
-  let h = Math.floor(hour);
-  let suffix = h >= 12 ? "PM" : "AM";
-  let displayHour = h % 12 === 0 ? 12 : h % 12;
+  const h = Math.floor(hour);
+  const suffix = h >= 12 ? "PM" : "AM";
+  const displayHour = h % 12 === 0 ? 12 : h % 12;
   return `${displayHour}:00 ${suffix}`;
 }
 
-function DayTimeline({ title, events }) {
-  const rows = 3;
+function TimelineGrid({ events }) {
+  const rows = 4; // last row reserved for hackathon
   const gridHeight = rows * ROW_HEIGHT + (rows - 1) * GAP;
+
+  // Array to track events in each row
+  const rowAssignments = Array(rows - 1).fill(null).map(() => []);
+
+  // Assign each event to first available row (except hackathon)
+  const eventRows = events.map(ev => {
+    if (ev.name.includes("Hackathon")) return rows; // last row
+
+    for (let r = 0; r < rows - 1; r++) {
+      const overlap = rowAssignments[r].some(e => !(ev.end <= e.start || ev.start >= e.end));
+      if (!overlap) {
+        rowAssignments[r].push(ev);
+        return r + 1;
+      }
+    }
+    return 1; // fallback if all rows overlap (rare)
+  });
 
   const gridStyle = {
     display: "grid",
@@ -59,13 +71,9 @@ function DayTimeline({ title, events }) {
         overflowX: "auto",
       }}
     >
-      <div style={{ color: "#00D4FF", fontWeight: 700, marginBottom: 12, fontSize: 16 }}>
-        {title}
-      </div>
-
-      {/* Hours labels in 12hr format */}
+      {/* Hours labels */}
       <div style={{ display: "flex", marginBottom: 10, minWidth: `${hours.length * 120}px` }}>
-        {hours.map((h) => (
+        {hours.map(h => (
           <div
             key={h}
             style={{
@@ -81,31 +89,29 @@ function DayTimeline({ title, events }) {
         ))}
       </div>
 
-      {/* Events Grid */}
+      {/* Grid lines */}
       <div style={{ position: "relative", minWidth: `${hours.length * 120}px` }}>
-        {hours.map((_, i) => {
-          const left = i * 120;
-          return (
-            <div
-              key={i}
-              style={{
-                position: "absolute",
-                left: `${left}px`,
-                top: 0,
-                width: 0,
-                height: `${gridHeight}px`,
-                borderLeft: "1px solid rgba(0,212,255,0.06)",
-                pointerEvents: "none",
-              }}
-            />
-          );
-        })}
+        {hours.map((_, i) => (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: `${i * 120}px`,
+              top: 0,
+              width: 0,
+              height: `${gridHeight}px`,
+              borderLeft: "1px solid rgba(0,212,255,0.06)",
+              pointerEvents: "none",
+            }}
+          />
+        ))}
 
+        {/* Event blocks */}
         <div style={gridStyle}>
           {events.map((ev, i) => {
             const colStart = Math.floor(ev.start) - HOURS_START + 1;
             const colEnd = Math.ceil(ev.end) - HOURS_START + 1;
-            const row = (i % 3) + 1;
+            const row = eventRows[i];
 
             return (
               <div
@@ -158,9 +164,7 @@ export default function Timeline() {
         >
           Event Timeline
         </h2>
-
-        <DayTimeline title="DAY 1" events={day1Events} />
-        <DayTimeline title="DAY 2" events={day2Events} />
+        <TimelineGrid events={events} />
       </div>
     </section>
   );
