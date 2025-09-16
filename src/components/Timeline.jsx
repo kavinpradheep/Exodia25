@@ -154,15 +154,9 @@ export default function Timeline() {
     <section id="timeline" style={{ background: "#000F1F", color: "white", padding: "40px 16px" }}>
       <div style={{ maxWidth: 1150, margin: "0 auto" }}>
         <h2
-          style={{
-            textAlign: "center",
-            color: "#00D4FF",
-            fontSize: 22,
-            letterSpacing: 2,
-            marginBottom: 28,
-          }}
+          style={{ fontSize: "2.5rem", textAlign: "center", marginBottom: "2.5rem", fontWeight: "bold" }}
         >
-          EVENT TIMELINE
+          Event Timeline
         </h2>
 
         <DayTimeline title="DAY 1" events={day1Events} />
