@@ -36,7 +36,8 @@ const hackathonEvents = [
   { name: "4th Session", start: 24.5, end: 31, color: "#008B8B", icon: <FaRocket /> },
   { name: "Breakfast", start: 31, end: 32, color: "#228B22", icon: <FaCoffee /> },
   { name: "5th Session", start: 32, end: 37.25, color: "#B22222", icon: <FaRocket /> },
-  { name: "Final", start: 38, end: 39, color: "#FF4500", icon: <FaRocket /> },
+  { name: "Final", start: 37.25, end: 39, color: "#FF4500", icon: <FaRocket /> },
+  { name: "Valedictory", start: 40.2, end: 40.4, color: "#DAA520", icon: <FaUser /> },
 ];
 
 function formatHour(hour) {
@@ -175,7 +176,7 @@ export default function Timeline() {
         <TimelineGrid events={events} hoursStart={8} hoursEnd={16.5} maxRows={maxRows + 1} />
 
         <h3 style={{ marginBottom: 16, color: "#00FFAA" }}>Hackathon Timeline</h3>
-        <TimelineGrid events={hackathonEvents} hoursStart={8} hoursEnd={40} maxRows={maxRows -1 } />
+        <TimelineGrid events={hackathonEvents} hoursStart={8} hoursEnd={42} maxRows={maxRows -1 } />
       </div>
     </section>
   );
