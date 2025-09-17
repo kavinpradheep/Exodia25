@@ -20,14 +20,40 @@ export default function Contact() {
         Contact Us
       </h2>
 
-      <p style={{ fontSize: "1.2rem", marginBottom: "0.75rem" }}>
-        📧 Email: contact@exodia.com
+      {/* General Mail */}
+      <p style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>
+        📧 Email: istestudentschapterkec@gmail.com
       </p>
       <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
-        📞 Phone: +91 6369960824
+        📞 For Queries, Contact:
       </p>
 
-      <div style={{ display: "flex", gap: "1.5rem", fontSize: "1.5rem" }}>
+      {/* Contacts List */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          fontSize: "1.2rem",
+          textAlign: "left",
+        }}
+      >
+        <p>
+          <strong>Sharni. K</strong> – Secretary <br />
+          📞 7708042415
+        </p>
+        <p>
+          <strong>Tamilarasi. P</strong> – Executive Head <br />
+          📞 9790615149
+        </p>
+        <p>
+          <strong>Kavin Pradheep S T</strong> – Dept Coordinator (Developer) <br />
+          📞 6369960824
+        </p>
+      </div>
+
+      {/* Social Links */}
+      <div style={{ display: "flex", gap: "1.5rem", fontSize: "1.5rem", marginTop: "2rem" }}>
         <a href="#" style={{ textDecoration: "none", color: "#fff" }}>🌐</a>
         <a href="#" style={{ textDecoration: "none", color: "#fff" }}>📸</a>
         <a href="#" style={{ textDecoration: "none", color: "#fff" }}>🔗</a>

@@ -161,7 +161,7 @@ export default function EventsRegistration() {
             description: "Paper Presentation has three Categories (Software, Circuit, Core) - Each Category has Three Prizes.",
             participants: "2-3 members",
             icon: "📄",
-            link: "#",
+            link: "https://forms.gle/49y1bZuhyirdb5Dj9",
             rules: [
               "Time limit: 5 minutes per team.",
               "Q&A for 2 minutes after presentation.",
