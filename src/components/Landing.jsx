@@ -44,27 +44,27 @@ export default function Landing() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
-        paddingTop: "60px",
+        paddingTop: "0px",
       }}
     >
       <img
         src={eventImage}
         alt="EXODIA Event"
-        style={{ width: "400px", marginBottom: "2rem" }}
+        style={{ width: "500px", margin: "0.5rem 0" }} // reduced spacing
       />
-      <h2 style={{ marginBottom: "0.5rem" }}>Get Ready for EXODIA'25!</h2>
+      <h2 style={{ margin: "0.2rem 0" }}>Get Ready for EXODIA'25!</h2>
       <p
         style={{
           fontSize: "1.2rem",
           fontWeight: "500",
           color: "#00D4FF",
-          marginBottom: "2rem",
+          margin: "0.5rem 0 1.5rem 0", // tighter gap
         }}
       >
         📅 Sept 27 • Sept 28 • Sept 29
       </p>
 
-      <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
+      <div style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
         {["Days", "Hours", "Minutes", "Seconds"].map((label) => (
           <div
             key={label}
