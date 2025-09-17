@@ -14,10 +14,21 @@ export default function Sponsors() {
         flexDirection: "column",
       }}
     >
-      {/* ✅ Heading stays at top */}
+      {/* Heading */}
       <h2 style={{ fontSize: "3rem", marginBottom: "2rem" }}>Our Sponsors</h2>
 
-      {/* ✅ Row 1: First 3 Sponsors */}
+      {/* Inline CSS for mobile responsiveness */}
+      <style>
+        {`
+          @media (max-width: 600px) {
+            .sponsor-logo {
+              height: 100px !important;
+            }
+          }
+        `}
+      </style>
+
+      {/* Row 1: First 3 Sponsors */}
       <div
         style={{
           display: "flex",
@@ -28,12 +39,12 @@ export default function Sponsors() {
           marginBottom: "3rem",
         }}
       >
-        {/* ✅ Sponsor 1 */}
         <div style={{ textAlign: "center" }}>
           <div style={{ backgroundColor: "white", borderRadius: "8px" }}>
             <img
               src="../assets/Vanitha_Photography.png"
               alt="Vanitha Photography"
+              className="sponsor-logo"
               style={{ height: "180px" }}
             />
           </div>
@@ -42,11 +53,11 @@ export default function Sponsors() {
           </p>
         </div>
 
-        {/* ✅ Sponsor 2 */}
         <div style={{ textAlign: "center" }}>
           <img
             src="../assets/CelebrateX_Events.png"
             alt="CelebrateX Events"
+            className="sponsor-logo"
             style={{ height: "180px", borderRadius: "8px" }}
           />
           <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>
@@ -54,18 +65,18 @@ export default function Sponsors() {
           </p>
         </div>
 
-        {/* ✅ Sponsor 3 */}
         <div style={{ textAlign: "center" }}>
           <img
             src="../assets/ATTI.png"
             alt="ATTI"
+            className="sponsor-logo"
             style={{ height: "180px", borderRadius: "8px" }}
           />
           <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>ATTI</p>
         </div>
       </div>
 
-      {/* ✅ Row 2: Sponsor 4 */}
+      {/* Row 2: Sponsor 4 */}
       <div
         style={{
           display: "flex",
@@ -77,6 +88,7 @@ export default function Sponsors() {
           <img
             src="../assets/imagivite.jpg"
             alt="Imagivite"
+            className="sponsor-logo"
             style={{ height: "140px", borderRadius: "8px" }}
           />
           <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>Imagivite</p>
