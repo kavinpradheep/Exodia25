@@ -39,6 +39,10 @@ export default function Contact() {
         }}
       >
         <p>
+          <strong>Bharath. N. K</strong> – Chairperson <br />
+          📧 Email : bharathnk.22aim@kongu.edu
+        </p>
+        <p>
           <strong>Sharni. K</strong> – Secretary <br />
           📞 7708042415
         </p>

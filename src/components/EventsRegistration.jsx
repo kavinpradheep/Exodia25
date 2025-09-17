@@ -175,7 +175,7 @@ export default function EventsRegistration() {
             description: "Coding competition to test problem-solving & logic.",
             participants: "Individual",
             icon: "💻",
-            link: "#",
+            link: "https://forms.gle/FpM9W7hwSPwmTM987",
             rules: [
               "No plagiarism allowed.",
               "Internet access is restricted.",
@@ -200,7 +200,7 @@ export default function EventsRegistration() {
 
           {renderEventCard({
             name: "Core Clash",
-            description: "Design a 2D model in AutoCAD based on department domain.",
+            description: "Design a 2D & 3D model in AutoCAD based on department domain.",
             participants: "Individual",
             icon: "📐",
             link: "#",
@@ -237,7 +237,7 @@ export default function EventsRegistration() {
           {renderEventCard({
             name: "IPL Auction",
             description: "Strategy event where teams act as franchise owners and bid for players.",
-            participants: "3 members",
+            participants: "2-3 members",
             icon: "📱",
             link: "#",
             rules: [
