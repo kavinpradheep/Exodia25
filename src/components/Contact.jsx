@@ -16,17 +16,51 @@ export default function Contact() {
         color: "#fff",
       }}
     >
-      <h2 style={{ fontSize: "3rem", marginBottom: "2rem", fontWeight: "bold" }}>
+      {/* Heading */}
+      <h2
+        style={{
+          fontSize: "3rem",
+          marginBottom: "3rem",
+          fontWeight: "bold",
+          borderBottom: "2px solid #00D4FF",
+          display: "inline-block",
+          paddingBottom: "0.5rem",
+        }}
+      >
         Contact Us
       </h2>
 
-      {/* General Mail */}
-      <p style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>
-        📧 Email: istestudentschapterkec@gmail.com
-      </p>
-      <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
-        📞 For Queries, Contact:
-      </p>
+      {/* Email & Instagram */}
+      <div style={{ marginBottom: "3rem", fontSize: "1.2rem", lineHeight: "1.8" }}>
+        <p>
+          📧 Email:{" "}
+          <a
+            href="mailto:istestudentschapterkec@gmail.com"
+            style={{
+              color: "#00D4FF",
+              textDecoration: "underline",
+              fontWeight: "bold",
+            }}
+          >
+            istestudentschapterkec@gmail.com
+          </a>
+        </p>
+        <p>
+          📸 Instagram:{" "}
+          <a
+            href="https://www.instagram.com/iste_kec_?igsh=MXJiNTF5cWNvdWZjdA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#00D4FF",
+              textDecoration: "underline",
+              fontWeight: "bold",
+            }}
+          >
+            @iste_kec_
+          </a>
+        </p>
+      </div>
 
       {/* Contacts List */}
       <div
@@ -36,11 +70,13 @@ export default function Contact() {
           gap: "1rem",
           fontSize: "1.2rem",
           textAlign: "left",
+          maxWidth: "500px",
+          width: "100%",
         }}
       >
         <p>
           <strong>Bharath. N. K</strong> – Chairperson <br />
-          📧 Email : bharathnk.22aim@kongu.edu
+          📧 Email: bharathnk.22aim@kongu.edu
         </p>
         <p>
           <strong>Sharni. K</strong> – Secretary <br />
@@ -54,13 +90,6 @@ export default function Contact() {
           <strong>Kavin Pradheep S T</strong> – Dept Coordinator (Developer) <br />
           📞 6369960824
         </p>
-      </div>
-
-      {/* Social Links */}
-      <div style={{ display: "flex", gap: "1.5rem", fontSize: "1.5rem", marginTop: "2rem" }}>
-        <a href="#" style={{ textDecoration: "none", color: "#fff" }}>🌐</a>
-        <a href="#" style={{ textDecoration: "none", color: "#fff" }}>📸</a>
-        <a href="#" style={{ textDecoration: "none", color: "#fff" }}>🔗</a>
       </div>
     </section>
   );
