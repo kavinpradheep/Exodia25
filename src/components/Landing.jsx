@@ -44,31 +44,52 @@ export default function Landing() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
-        paddingTop: "0px",
+        paddingTop: "2rem",
       }}
     >
       <img
         src={eventImage}
         alt="EXODIA Event"
-        style={{ width: "500px", margin: "0.5rem 0" }} // reduced spacing
+        className="event-image"
+        style={{
+          width: "80%",
+          maxWidth: "500px",
+          margin: "0.5rem 0",
+        }}
       />
-      <h2 style={{ margin: "0.2rem 0" }}>Get Ready for EXODIA'25!</h2>
+
+      <h2 style={{ margin: "0.2rem 0", fontSize: "2rem", textAlign: "center" }}>
+        Get Ready for EXODIA'25!
+      </h2>
       <p
         style={{
-          fontSize: "1.2rem",
+          fontSize: "1rem",
           fontWeight: "500",
           color: "#00D4FF",
-          margin: "0.5rem 0 1.5rem 0", // tighter gap
+          margin: "0.5rem 0 1rem 0",
+          textAlign: "center",
         }}
       >
         📅 Sept 27 • Sept 28 • Sept 29
       </p>
 
-      <div style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "1rem",
+          marginBottom: "1.5rem",
+        }}
+      >
         {["Days", "Hours", "Minutes", "Seconds"].map((label) => (
           <div
             key={label}
-            style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
           >
             <div
               style={{
@@ -81,11 +102,11 @@ export default function Landing() {
                 borderRadius: "8px",
               }}
             >
-              <h1 style={{ color: "#00D4FF", margin: 0 }}>
+              <h1 style={{ color: "#00D4FF", margin: 0, fontSize: "1.2rem" }}>
                 {timeLeft[label] || "00"}
               </h1>
             </div>
-            <p style={{ marginTop: "5px" }}>{label}</p>
+            <p style={{ marginTop: "5px", fontSize: "0.9rem" }}>{label}</p>
           </div>
         ))}
       </div>
@@ -95,15 +116,28 @@ export default function Landing() {
         style={{
           backgroundColor: "#00D4FF",
           color: "#000F1F",
-          padding: "10px 20px",
+          padding: "8px 16px",
           borderRadius: "5px",
           border: "none",
           cursor: "pointer",
           fontWeight: "bold",
+          fontSize: "1rem",
         }}
       >
         Register Now
       </button>
+
+      {/* Responsive image fix */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .event-image {
+              width: 90%; /* slightly bigger on mobile */
+              max-width: 550px;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 }

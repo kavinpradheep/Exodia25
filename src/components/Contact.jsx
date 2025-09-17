@@ -1,29 +1,6 @@
 import React from "react";
 
 export default function Contact() {
-  const contacts = [
-    {
-      name: "Bharath. N. K",
-      role: "Chairperson",
-      email: "bharathnk.22aim@kongu.edu",
-    },
-    {
-      name: "Sharni. K",
-      role: "Secretary",
-      phone: "7708042415",
-    },
-    {
-      name: "Tamilarasi. P",
-      role: "Executive Head",
-      phone: "9790615149",
-    },
-    {
-      name: "Kavin Pradheep S T",
-      role: "Dept Coordinator (Developer)",
-      phone: "6369960824",
-    },
-  ];
-
   return (
     <section
       id="contact"
@@ -98,47 +75,86 @@ export default function Contact() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)", // 2 cards per row on desktop
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
           gap: "1.5rem",
           width: "100%",
           maxWidth: "900px",
         }}
       >
-        {contacts.map((contact, index) => (
-          <div
-            key={index}
-            style={{
-              backgroundColor: "#0a1a2f",
-              padding: "1.5rem",
-              borderRadius: "12px",
-              boxShadow: "0 4px 12px rgba(0, 212, 255, 0.15)",
-              transition: "transform 0.3s ease",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              minHeight: "160px",
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
-            onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-          >
-            <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>{contact.name}</h3>
-            <p style={{ margin: "0.3rem 0" }}>{contact.role}</p>
-            {contact.email && <p style={{ margin: "0.3rem 0" }}>📧 {contact.email}</p>}
-            {contact.phone && <p style={{ margin: "0.3rem 0" }}>📞 {contact.phone}</p>}
-          </div>
-        ))}
-      </div>
+        {/* Card 1 */}
+        <div
+          style={{
+            backgroundColor: "#0a1a2f",
+            padding: "1.5rem",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0, 212, 255, 0.15)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>
+            Bharath. N. K
+          </h3>
+          <p style={{ margin: "0.3rem 0" }}>Chairperson</p>
+          <p style={{ margin: "0.3rem 0" }}>📧 bharathnk.22aim@kongu.edu</p>
+        </div>
 
-      {/* Responsive Fix */}
-      <style>
-        {`
-          @media (max-width: 768px) {
-            #contact > div {
-              grid-template-columns: 1fr; // 1 card per row on mobile
-            }
-          }
-        `}
-      </style>
+        {/* Card 2 */}
+        <div
+          style={{
+            backgroundColor: "#0a1a2f",
+            padding: "1.5rem",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0, 212, 255, 0.15)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>Sharni. K</h3>
+          <p style={{ margin: "0.3rem 0" }}>Secretary</p>
+          <p style={{ margin: "0.3rem 0" }}>📞 7708042415</p>
+        </div>
+
+        {/* Card 3 */}
+        <div
+          style={{
+            backgroundColor: "#0a1a2f",
+            padding: "1.5rem",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0, 212, 255, 0.15)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>
+            Tamilarasi. P
+          </h3>
+          <p style={{ margin: "0.3rem 0" }}>Executive Head</p>
+          <p style={{ margin: "0.3rem 0" }}>📞 9790615149</p>
+        </div>
+
+        {/* Card 4 */}
+        <div
+          style={{
+            backgroundColor: "#0a1a2f",
+            padding: "1.5rem",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0, 212, 255, 0.15)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>
+            Kavin Pradheep S T
+          </h3>
+          <p style={{ margin: "0.3rem 0" }}>Dept Coordinator (Developer)</p>
+          <p style={{ margin: "0.3rem 0" }}>📞 6369960824</p>
+        </div>
+      </div>
     </section>
   );
 }
