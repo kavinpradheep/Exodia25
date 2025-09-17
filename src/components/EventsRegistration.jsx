@@ -189,7 +189,7 @@ export default function EventsRegistration() {
             description: "Circuit debugging and electronics challenge.",
             participants: "2 members",
             icon: "🔌",
-            link: "#",
+            link: "https://forms.gle/Ph3mrveoa7oGiskx7",
             rules: [
               "Online Simulation.",
               "Bring your own Laptop's.",
@@ -225,7 +225,7 @@ export default function EventsRegistration() {
             description: "Fast-paced quiz on technical & general knowledge.",
             participants: "2 members",
             icon: "❓",
-            link: "#",
+            link: "https://forms.gle/wvuDwm4irNvvEiuk8",
             rules: [
               "Prelims (written), followed by buzzer rounds.",
               "Negative marking in finals.",
@@ -263,7 +263,7 @@ export default function EventsRegistration() {
             participants: "4 members per team",
             duration: "30 hours",
             icon: "🚀",
-            link: "#",
+            link: "https://forms.gle/j1XYvsEW2nxppm1W8",
             rules: [
               "Teams Will be Sortlisted for Finale, based on their Workflow, Idealogy, Tech Stack.",
               "Internships will be provided for the Best performing individuals.",
