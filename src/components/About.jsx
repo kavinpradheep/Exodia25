@@ -44,6 +44,25 @@ export default function About() {
 
         {/* Right Column: Event Highlights */}
         <div style={{ flex: "1 1 350px", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+
+          <div
+            style={{
+              background: "#00FFAA",
+              padding: "1.2rem",
+              borderRadius: "14px",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.8rem",
+              boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+              color: "#000",
+            }}
+          >
+            <FaClock size={28} color="#000" />
+            <div>
+              <strong>30-Hour Hackathon:</strong> Teams of 4 collaborate on real-world challenges with expert mentorship.
+            </div>
+          </div>
+
           <div
             style={{
               background: "#001933",
@@ -75,24 +94,6 @@ export default function About() {
             <FaUsers size={28} color="#FFAA00" />
             <div>
               <strong>Non-Technical Events:</strong> Flash Clash, IPL Auction
-            </div>
-          </div>
-
-          <div
-            style={{
-              background: "#00FFAA",
-              padding: "1.2rem",
-              borderRadius: "14px",
-              display: "flex",
-              alignItems: "center",
-              gap: "0.8rem",
-              boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
-              color: "#000",
-            }}
-          >
-            <FaClock size={28} color="#000" />
-            <div>
-              <strong>30-Hour Hackathon:</strong> Teams of 4 collaborate on real-world challenges with expert mentorship.
             </div>
           </div>
         </div>
