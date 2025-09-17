@@ -175,7 +175,7 @@ export default function Timeline() {
         </h2>
         <h3 style={{ marginBottom: 16, color: "#00FFAA" }}>Hackathon Timeline</h3>
         <p>27th – 28th September 2025</p>
-        <TimelineGrid events={hackathonEvents} hoursStart={8} hoursEnd={41} maxRows={maxRows - 1} />
+        <TimelineGrid events={hackathonEvents} hoursStart={8} hoursEnd={40.5} maxRows={maxRows - 1} />
 
         <h3 style={{ marginBottom: 16, color: "#00D4FF" }}>Main Events</h3>
         <p>29th September 2025</p>
