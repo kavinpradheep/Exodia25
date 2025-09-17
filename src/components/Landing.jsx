@@ -5,7 +5,7 @@ export default function Landing() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
-    const launchDate = new Date("2025-09-25T09:00:00").getTime();
+    const launchDate = new Date("2025-09-27T09:00:00").getTime();
     const now = new Date().getTime();
     const difference = launchDate - now;
     let timeLeft = {};
@@ -52,7 +52,17 @@ export default function Landing() {
         alt="EXODIA Event"
         style={{ width: "400px", marginBottom: "2rem" }}
       />
-      <h2 style={{ marginBottom: "2rem" }}>Get Ready for EXODIA'25!</h2>
+      <h2 style={{ marginBottom: "0.5rem" }}>Get Ready for EXODIA'25!</h2>
+      <p
+        style={{
+          fontSize: "1.2rem",
+          fontWeight: "500",
+          color: "#00D4FF",
+          marginBottom: "2rem",
+        }}
+      >
+        📅 Sept 27 • Sept 28 • Sept 29
+      </p>
 
       <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
         {["Days", "Hours", "Minutes", "Seconds"].map((label) => (

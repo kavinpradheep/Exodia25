@@ -148,7 +148,56 @@ export default function EventsRegistration() {
         `}
       </style>
 
-      <h2 style={{ fontSize: "3rem", marginBottom: "2rem" }}>Events</h2>
+      {/* --- Hackathon --- */}
+      <div>
+         <h3
+          style={{
+            fontSize: "2.5rem",
+            marginBottom: "0.5rem",
+            color: "#00FFAA",
+          }}
+        >
+          Hackathon
+        </h3>
+        <p
+          style={{
+            fontSize: "1.1rem",
+            marginBottom: "1.5rem",
+            color: "#aaa",
+            fontWeight: "500",
+          }}
+        >
+          📅 27th – 28th September 2025
+        </p>
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+          {renderEventCard({
+            name: "Hackathon 30-Hour Challenge",
+            fee: "₹100 per team",
+            description: "Collaborate, code, and innovate in a 30-hour hackathon.",
+            participants: "4 members per team",
+            duration: "30 hours",
+            icon: "🚀",
+            link: "https://forms.gle/j1XYvsEW2nxppm1W8",
+            rules: [
+              "Teams Will be Sortlisted for Finale, based on their Workflow, Idealogy, Tech Stack.",
+              "Internships will be provided for the Best performing individuals.",
+              "Join the Whatsapp group while Registration."
+            ]
+          }, "hackathon", true)}
+        </div>
+      </div>
+
+      <h2 style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>Events</h2>
+      <p
+        style={{
+          fontSize: "1.1rem",
+          marginBottom: "2rem",
+          color: "#aaa",
+          fontWeight: "500",
+        }}
+      >
+        📅 29th September 2025
+      </p>
 
       {/* --- Technical Events --- */}
       <div style={{ marginBottom: "4rem" }}>
@@ -247,29 +296,6 @@ export default function EventsRegistration() {
               "Fees : ₹60 per person"
             ]
           }, "iplauction")}
-        </div>
-      </div>
-
-      {/* --- Hackathon --- */}
-      <div>
-        <h3 style={{ fontSize: "2.5rem", marginBottom: "1.5rem", color: "#00FFAA" }}>
-          Hackathon
-        </h3>
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
-          {renderEventCard({
-            name: "Hackathon 30-Hour Challenge",
-            fee: "₹100 per team",
-            description: "Collaborate, code, and innovate in a 30-hour hackathon.",
-            participants: "4 members per team",
-            duration: "30 hours",
-            icon: "🚀",
-            link: "https://forms.gle/j1XYvsEW2nxppm1W8",
-            rules: [
-              "Teams Will be Sortlisted for Finale, based on their Workflow, Idealogy, Tech Stack.",
-              "Internships will be provided for the Best performing individuals.",
-              "Join the Whatsapp group while Registration."
-            ]
-          }, "hackathon", true)}
         </div>
       </div>
     </section>
