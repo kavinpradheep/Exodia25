@@ -36,8 +36,7 @@ const hackathonEvents = [
   { name: "4th Session", start: 24.5, end: 31, color: "#008B8B", icon: <FaRocket /> },
   { name: "Breakfast", start: 31, end: 32, color: "#228B22", icon: <FaCoffee /> },
   { name: "5th Session", start: 32, end: 37.25, color: "#B22222", icon: <FaRocket /> },
-  { name: "Final", start: 37.25, end: 39, color: "#FF4500", icon: <FaRocket /> },
-  { name: "Valedictory", start: 40.2, end: 40.4, color: "#DAA520", icon: <FaUser /> },
+  { name: "Final", start: 37.25, end: 40.4, color: "#FF4500", icon: <FaRocket /> },
 ];
 
 function formatHour(hour) {
