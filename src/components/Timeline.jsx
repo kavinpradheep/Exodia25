@@ -8,35 +8,35 @@ const GAP = 15;
 
 // Main timeline events
 const events = [
-  { name: "Inaugural", start: 8.75, end: 9.75, color: "#B22222", icon: <FaUser /> },
-  { name: "Instructions", start: 9.75, end: 10, color: "#6A0DAD", icon: <FaClipboardList /> }, // new icon
-  { name: "Refreshment", start: 10, end: 10.25, color: "#DAA520", icon: <FaCoffee /> }, // coffee icon
-  { name: "Paper Presentation Core", start: 10.25, end: 12.75, color: "#1E90FF", icon: <FaComments /> },
-  { name: "Paper Presentation Circuit", start: 10.25, end: 12.75, color: "#FF4500", icon: <FaComments /> },
-  { name: "Paper Presentation Software", start: 10.25, end: 12.75, color: "#00CED1", icon: <FaComments /> },
-  { name: "Lunch", start: 12.25, end: 13.25, color: "#228B22", icon: <FaCoffee /> },
-  { name: "Flash Clash", start: 13.5, end: 14.25, color: "#008B8B", icon: <FaLaptopCode /> },
-  { name: "IPL Auction", start: 13.5, end: 14.25, color: "#DAA520", icon: <FaLaptopCode /> },
-  { name: "Refreshment", start: 14.25, end: 14.5, color: "#6A0DAD", icon: <FaCoffee /> }, // coffee icon
-  { name: "ProCoder", start: 14.5, end: 16.25, color: "#DAA520", icon: <FaCogs /> },
-  { name: "Circuitrix", start: 14.5, end: 16.25, color: "#FF4500", icon: <FaLaptopCode /> },
-  { name: "Core Clash", start: 14.5, end: 16.25, color: "#B22222", icon: <FaLaptopCode /> },
-  { name: "Valedictory", start: 16.25, end: 16.5, color: "#DAA520", icon: <FaUser /> },
+  { name: "Inaugural", start: 8.85, end: 9.49, color: "#B22222", icon: <FaUser /> },
+  { name: "Refreshment", start: 9.50, end: 9.99, color: "#DAA520", icon: <FaCoffee /> }, // coffee icon
+  { name: "Paper Presentation Core", start: 10, end: 12.57, color: "#1E90FF", icon: <FaComments /> },
+  { name: "Paper Presentation Circuit", start: 10, end: 12.57, color: "#FF4500", icon: <FaComments /> },
+  { name: "Paper Presentation Software", start: 10, end: 12.57, color: "#00CED1", icon: <FaComments /> },
+  { name: "Lunch", start: 12.58, end: 13.49, color: "#228B22", icon: <FaCoffee /> },
+  { name: "Flash Clash", start: 13.5, end: 14.24, color: "#008B8B", icon: <FaLaptopCode /> },
+  { name: "IPL Auction", start: 13.5, end: 14.24, color: "#DAA520", icon: <FaLaptopCode /> },
+  { name: "Refreshment", start: 14.25, end: 14.6, color: "#6A0DAD", icon: <FaCoffee /> }, // coffee icon
+  { name: "ProCoder", start: 14.61, end: 16.1, color: "#DAA520", icon: <FaCogs /> },
+  { name: "Circuitrix", start: 14.61, end: 16.1, color: "#FF4500", icon: <FaLaptopCode /> },
+  { name: "Core Clash", start: 14.61, end: 16.1, color: "#B22222", icon: <FaLaptopCode /> },
+  { name: "Valedictory", start: 16.11, end: 16.5, color: "#DAA520", icon: <FaUser /> },
 ];
 
 // Hackathon timeline events
 const hackathonEvents = [
-  { name: "Assemble & Setups", start: 8.5, end: 9, color: "#00FFAA", icon: <FaRocket /> },
-  { name: "1st Session", start: 9, end: 13.25, color: "#1E90FF", icon: <FaRocket /> },
-  { name: "Lunch", start: 13.25, end: 14.25, color: "#228B22", icon: <FaCoffee /> },
-  { name: "2nd Session", start: 14.25, end: 20, color: "#FF4500", icon: <FaRocket /> },
-  { name: "Dinner", start: 20, end: 21, color: "#DAA520", icon: <FaCoffee /> },
-  { name: "3rd Session", start: 21, end: 24, color: "#6A0DAD", icon: <FaRocket /> },
-  { name: "DJ", start: 24, end: 24.5, color: "#00CED1", icon: <FaComments /> },
-  { name: "4th Session", start: 24.5, end: 31, color: "#008B8B", icon: <FaRocket /> },
-  { name: "Breakfast", start: 31, end: 32, color: "#228B22", icon: <FaCoffee /> },
-  { name: "5th Session", start: 32, end: 37.25, color: "#B22222", icon: <FaRocket /> },
-  { name: "Final", start: 37.25, end: 40.4, color: "#FF4500", icon: <FaRocket /> },
+  { name: "Assemble & Setups", start: 8.7, end: 9.2, color: "#00FFAA", icon: <FaRocket /> },
+  { name: "1st Session", start: 9.21, end: 12.57, color: "#1E90FF", icon: <FaRocket /> },
+  { name: "Lunch", start: 12.58, end: 13.58, color: "#228B22", icon: <FaCoffee /> },
+  { name: "2nd Session", start: 13.59, end: 19.73, color: "#FF4500", icon: <FaRocket /> },
+  { name: "Dinner", start: 19.74, end: 20.7, color: "#DAA520", icon: <FaCoffee /> },
+  { name: "3rd Session", start: 20.71, end: 24.2, color: "#6A0DAD", icon: <FaRocket /> },
+  { name: "DJ", start: 24.21, end: 24.7, color: "#00CED1", icon: <FaComments /> },
+  { name: "4th Session", start: 24.71, end: 31.2, color: "#008B8B", icon: <FaRocket /> },
+  { name: "Breakfast", start: 31.21, end: 32.7, color: "#228B22", icon: <FaCoffee /> },
+  { name: "5th Session", start: 32.71, end: 37.43, color: "#B22222", icon: <FaRocket /> },
+  { name: "Lunch", start: 37.44, end: 38.2, color: "#228B22", icon: <FaCoffee /> },
+  { name: "Final", start: 38.21, end: 39.3, color: "#FF4500", icon: <FaRocket /> },
 ];
 
 function formatHour(hour) {
@@ -172,7 +172,7 @@ export default function Timeline() {
         </h2>
         <h3 style={{ marginBottom: 16, color: "#00FFAA" }}>Hackathon Timeline</h3>
         <p>27th – 28th September 2025</p>
-        <TimelineGrid events={hackathonEvents} hoursStart={8} hoursEnd={41} maxRows={maxRows -1 } />
+        <TimelineGrid events={hackathonEvents} hoursStart={8} hoursEnd={41} maxRows={maxRows - 1} />
 
         <h3 style={{ marginBottom: 16, color: "#00D4FF" }}>Main Events</h3>
         <p>29th September 2025</p>
