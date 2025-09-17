@@ -203,7 +203,7 @@ export default function EventsRegistration() {
             description: "Design a 2D & 3D model in AutoCAD based on department domain.",
             participants: "Individual",
             icon: "📐",
-            link: "#",
+            link: "https://forms.gle/nFuovFt4YtzS8Bwg7",
             rules: [
               "Theme will be announced on the spot.",
               "No pre-made templates allowed.",
@@ -239,7 +239,7 @@ export default function EventsRegistration() {
             description: "Strategy event where teams act as franchise owners and bid for players.",
             participants: "2-3 members",
             icon: "📱",
-            link: "#",
+            link: "https://forms.gle/C4PqSgPh8r4MgcTB8",
             rules: [
               "Virtual budget will be provided.",
               "No exceeding the team size.",
