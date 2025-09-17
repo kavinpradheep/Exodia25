@@ -40,13 +40,16 @@ const hackathonEvents = [
 ];
 
 function formatHour(hour) {
-  const h = Math.floor(hour);
-  const m = Math.round((hour - h) * 60);
+  const day = Math.floor(hour / 24) + 1; // Day number
+  const hourInDay = hour % 24;
+  const h = Math.floor(hourInDay);
+  const m = Math.round((hourInDay - h) * 60);
   const suffix = h >= 12 ? "PM" : "AM";
   const displayHour = h % 12 === 0 ? 12 : h % 12;
   const displayMin = m === 0 ? "00" : m;
   return `${displayHour}:${displayMin} ${suffix}`;
 }
+
 
 function TimelineGrid({ events, hoursStart = 8, hoursEnd = 17, maxRows }) {
   const rows = [];
