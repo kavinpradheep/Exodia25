@@ -179,10 +179,12 @@ export default function EventsRegistration() {
             icon: "🚀",
             link: "https://forms.gle/j1XYvsEW2nxppm1W8",
             rules: [
-              "Teams Will be Sortlisted for Finale, based on their Workflow, Idealogy, Tech Stack.",
-              "Internships will be provided for the Best performing individuals.",
-              "Join the Whatsapp group while Registration."
-            ]
+            "Teams will be shortlisted for the Finale based on their workflow, ideology, and tech stack.",
+            "Prelims on 18.09.25 – registered students must submit their PPTs for evaluation.",
+            "Further updates will be shared in the WhatsApp group (join during registration).",
+            "Internships will be provided to the best-performing individuals."
+           ]
+
           }, "hackathon", true)}
         </div>
       </div>
