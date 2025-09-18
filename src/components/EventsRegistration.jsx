@@ -275,7 +275,7 @@ export default function EventsRegistration() {
             {
               name: "Paper Presentation",
               description:
-                "Paper Presentation has three Categories (Software, Circuit, Core) - Each Category has Three Prizes.",
+                "Paper Presentation has three Categories (Software, Circuit, Core) - Each Category has Two Prizes.",
               participants: "2-3 members",
               icon: "📄",
               link: "https://forms.gle/49y1bZuhyirdb5Dj9",
@@ -371,6 +371,21 @@ export default function EventsRegistration() {
               ],
             },
             "flashclash"
+          )}
+
+          {renderEventCard(
+            {
+              name: "Soul Sync",
+              description: "A fun creativity + coordination event with surprise tasks.",
+              participants: "2 members",
+              icon: "🎭",
+              link: "https://forms.gle/jtS6wrRjcXNJZy2J9",
+              rules: [
+                "Multiple rounds (puzzles, role-plays, synchronization tasks).",
+                "Judging based on team coordination, creativity & clarity.",
+              ],
+            },
+            "soulsync"
           )}
 
           {renderEventCard(
