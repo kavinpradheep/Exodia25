@@ -169,24 +169,47 @@ export default function EventsRegistration() {
         >
           📅 27th – 28th September 2025
         </p>
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem", gap: "2rem" }}>
           {renderEventCard({
             name: "Hackathon 30-Hour Challenge",
-            fee: "₹100 per team",
+            fee: "₹200 per team",
             description: "Collaborate, code, and innovate in a 30-hour hackathon.",
             participants: "4 members per team",
             duration: "30 hours",
             icon: "🚀",
             link: "https://forms.gle/j1XYvsEW2nxppm1W8",
             rules: [
-            "Teams will be shortlisted for the Finale based on their workflow, ideology, and tech stack.",
-            "Prelims on 20.09.25 – registered students must submit their PPTs for evaluation.",
-            "Further updates will be shared in the WhatsApp group (join during registration).",
-            "Internships will be provided to the best-performing individuals."
-           ]
-
+              "Teams will be shortlisted for the Finale based on their workflow, ideology, and tech stack.",
+              "Prelims on 20.09.25 – registered students must submit their PPTs for evaluation.",
+              "Further updates will be shared in the WhatsApp group (join during registration).",
+              "Internships will be provided to the best-performing individuals."
+            ]
           }, "hackathon", true)}
+
+          {/* 🔥 Internship Highlight Card */}
+          <div
+            className="event-card"
+            style={{
+              background: "linear-gradient(135deg, #FFD700, #FF8C00)",
+              color: "#000",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              fontWeight: "bold",
+              textAlign: "center",
+              fontSize: "1.2rem",
+            }}
+          >
+            <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>🎯</div>
+            <h4>Big Opportunity!</h4>
+            <p style={{ fontSize: "1rem", marginTop: "0.5rem" }}>
+              Winners have a <span style={{ color: "#B22222" }}>high chance</span> of landing{" "}
+              <strong>Internships</strong> 🚀
+            </p>
+          </div>
         </div>
+
       </div>
 
       <h2 style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>Events</h2>

@@ -1,18 +1,37 @@
 import React from "react";
-import { FaLaptopCode, FaUsers, FaClock } from "react-icons/fa";
+import { FaLaptopCode, FaUsers, FaClock, FaTrophy } from "react-icons/fa";
 
 export default function About() {
   return (
     <section
       id="about"
       style={{
-        padding: "4rem 2rem", // reduced top-bottom padding
+        padding: "4rem 2rem",
         background: "#000F1F",
         color: "#fff",
         textAlign: "center",
       }}
     >
       <h2 style={{ fontSize: "2.8rem", marginBottom: "2rem" }}>About Exodia 2k25</h2>
+
+     {/* 🔥 Cash Prize Highlight */}
+      <div
+        style={{
+          background: "linear-gradient(90deg, #FFD700, #FF9900)",
+          color: "#000",
+          padding: "1rem 2rem",
+          borderRadius: "16px",
+          fontSize: "1.6rem",
+          fontWeight: "bold",
+          margin: "0 auto 2rem auto",
+          maxWidth: "600px",
+          boxShadow: "0 4px 15px rgba(255, 215, 0, 0.6)",
+          transform: "scale(1.05)",
+        }}
+      >
+        🏆 Cash Prizes Worth <span style={{ color: "#B22222" }}>Around ₹25,000</span> to Grab!
+      </div>
+
 
       <div
         style={{
@@ -22,7 +41,7 @@ export default function About() {
           gap: "1.5rem",
           maxWidth: "1100px",
           margin: "0 auto",
-          alignItems: "flex-start", // aligns cards with text top
+          alignItems: "flex-start",
         }}
       >
         {/* Left Column: Text */}
@@ -44,7 +63,6 @@ export default function About() {
 
         {/* Right Column: Event Highlights */}
         <div style={{ flex: "1 1 350px", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-
           <div
             style={{
               background: "#00FFAA",
