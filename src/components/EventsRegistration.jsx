@@ -383,6 +383,7 @@ export default function EventsRegistration() {
               rules: [
                 "Multiple rounds (puzzles, role-plays, synchronization tasks).",
                 "Judging based on team coordination, creativity & clarity.",
+                "Fees : ₹60 per person",
               ],
             },
             "soulsync"
