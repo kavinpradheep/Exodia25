@@ -211,7 +211,8 @@ export default function EventsRegistration() {
               link: "https://forms.gle/j1XYvsEW2nxppm1W8",
               rules: [
                 "Teams will be shortlisted for the Finale based on their workflow, ideology, and tech stack.",
-                "Prelims on 20.09.25 – registered students must submit their PPTs for evaluation.",
+                "Prelims on 24.09.25 – registered students must submit their PPTs for evaluation.",
+                "Shortlisted teams will receive a confirmation call.",
                 "Further updates will be shared in the WhatsApp group (join during registration).",
                 "Internships will be provided to the best-performing individuals.",
               ],
