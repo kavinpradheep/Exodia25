@@ -208,7 +208,7 @@ export default function EventsRegistration() {
               participants: "4 members per team",
               duration: "30 hours",
               icon: "🚀",
-              link: "https://forms.gle/j1XYvsEW2nxppm1W8",
+              link: "#",
               rules: [
                 "Teams will be shortlisted for the Finale based on their workflow, ideology, and tech stack.",
                 "Prelims on 24.09.25 – registered students must submit their PPTs for evaluation.",
@@ -279,7 +279,7 @@ export default function EventsRegistration() {
                 "Paper Presentation has three Categories (Software, Circuit, Core) - Each Category has Two Prizes.",
               participants: "2-3 members",
               icon: "📄",
-              link: "https://forms.gle/49y1bZuhyirdb5Dj9",
+              link: "#",
               rules: [
                 "Time limit: 5 minutes per team.",
                 "Q&A for 2 minutes after presentation.",
@@ -296,7 +296,7 @@ export default function EventsRegistration() {
               description: "Coding competition to test problem-solving & logic.",
               participants: "Individual",
               icon: "💻",
-              link: "https://forms.gle/FpM9W7hwSPwmTM987",
+              link: "#",
               rules: [
                 "No plagiarism allowed.",
                 "Internet access is restricted.",
@@ -313,7 +313,7 @@ export default function EventsRegistration() {
               description: "Circuit debugging and electronics challenge.",
               participants: "2 members",
               icon: "🔌",
-              link: "https://forms.gle/Ph3mrveoa7oGiskx7",
+              link: "#",
               rules: [
                 "Online Simulation.",
                 "Bring your own Laptop's.",
@@ -331,7 +331,7 @@ export default function EventsRegistration() {
                 "Design a 2D & 3D model in AutoCAD based on department domain.",
               participants: "Individual",
               icon: "📐",
-              link: "https://forms.gle/nFuovFt4YtzS8Bwg7",
+              link: "#",
               rules: [
                 "Theme will be announced on the spot.",
                 "No pre-made templates allowed.",
@@ -363,7 +363,7 @@ export default function EventsRegistration() {
               description: "Fast-paced quiz on technical & general knowledge.",
               participants: "2 members",
               icon: "❓",
-              link: "https://forms.gle/wvuDwm4irNvvEiuk8",
+              link: "#",
               rules: [
                 "Prelims (written), followed by buzzer rounds.",
                 "Negative marking in finals.",
@@ -380,7 +380,7 @@ export default function EventsRegistration() {
               description: "A fun creativity + coordination event with surprise tasks.",
               participants: "2 members",
               icon: "🎭",
-              link: "https://forms.gle/jtS6wrRjcXNJZy2J9",
+              link: "#",
               rules: [
                 "Multiple rounds (puzzles, role-plays, synchronization tasks).",
                 "Judging based on team coordination, creativity & clarity.",
@@ -397,7 +397,7 @@ export default function EventsRegistration() {
                 "Strategy event where teams act as franchise owners and bid for players.",
               participants: "2-3 members",
               icon: "📱",
-              link: "https://forms.gle/C4PqSgPh8r4MgcTB8",
+              link: "#",
               rules: [
                 "Virtual budget will be provided.",
                 "No exceeding the team size.",
