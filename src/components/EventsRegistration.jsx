@@ -189,7 +189,7 @@ export default function EventsRegistration() {
             fontWeight: "500",
           }}
         >
-          📅 27th – 28th September 2025
+          📅 Announcing Soon...
         </p>
         <div
           style={{
@@ -200,6 +200,8 @@ export default function EventsRegistration() {
             flexWrap: "wrap",
           }}
         >
+          {/*
+
           {renderEventCard(
             {
               name: "Hackathon 30-Hour Challenge",
@@ -221,6 +223,8 @@ export default function EventsRegistration() {
             true
           )}
 
+          */}
+
           {/* 🔥 Internship Highlight Card */}
           <div
             className="event-card"
@@ -238,11 +242,19 @@ export default function EventsRegistration() {
           >
             <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>🎯</div>
             <h4>Big Opportunity!</h4>
+
+            {/*
+
             <p style={{ fontSize: "1rem", marginTop: "0.5rem" }}>
               Winners have a{" "}
               <span style={{ color: "#B22222" }}>high chance</span> of landing{" "}
               <strong>Internships</strong> 🚀
             </p>
+
+            */}
+
+            <p style={{ fontSize: "1rem", marginTop: "0.5rem", color: "#B22222" }}>Stay Tuned!!</p>
+
           </div>
         </div>
       </div>
@@ -256,7 +268,7 @@ export default function EventsRegistration() {
           fontWeight: "500",
         }}
       >
-        📅 29th September 2025
+        📅 Announcing Soon...
       </p>
 
       {/* --- Technical Events --- */}
@@ -272,6 +284,7 @@ export default function EventsRegistration() {
             gap: "2rem",
           }}
         >
+
           {renderEventCard(
             {
               name: "Paper Presentation",
@@ -292,7 +305,7 @@ export default function EventsRegistration() {
 
           {renderEventCard(
             {
-              name: "ProCoder",
+              name: "CodeUp",
               description: "Coding competition to test problem-solving & logic.",
               participants: "Individual",
               icon: "💻",
@@ -304,7 +317,7 @@ export default function EventsRegistration() {
                 "Fees : ₹60",
               ],
             },
-            "procoder"
+            "codeup"
           )}
 
           {renderEventCard(

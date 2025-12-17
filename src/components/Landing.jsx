@@ -5,7 +5,7 @@ export default function Landing() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
-    const launchDate = new Date("2025-09-27T09:00:00").getTime();
+    const launchDate = new Date("2026-01-03T09:00:00").getTime();
     const now = new Date().getTime();
     const difference = launchDate - now;
     let timeLeft = {};
@@ -59,7 +59,7 @@ export default function Landing() {
       />
 
       <h2 style={{ margin: "0.2rem 0", fontSize: "2rem", textAlign: "center" }}>
-        Get Ready for EXODIA'25!
+        Get Ready for EXODIA'26!
       </h2>
       <p
         style={{
@@ -70,7 +70,7 @@ export default function Landing() {
           textAlign: "center",
         }}
       >
-        📅 Sept 27 • Sept 28 • Sept 29
+        📅 Jan 03
       </p>
 
       <div
