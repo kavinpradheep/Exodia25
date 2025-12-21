@@ -59,7 +59,7 @@ export default function Landing() {
       />
 
       <h2 style={{ margin: "0.2rem 0", fontSize: "2rem", textAlign: "center" }}>
-        Get Ready for EXODIA'26!
+        Get Ready for EXODIA'25!
       </h2>
       <p
         style={{

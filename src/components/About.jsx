@@ -12,7 +12,7 @@ export default function About() {
         textAlign: "center",
       }}
     >
-      <h2 style={{ fontSize: "2.8rem", marginBottom: "2rem" }}>About Exodia 2k26</h2>
+      <h2 style={{ fontSize: "2.8rem", marginBottom: "2rem" }}>About Exodia 2k25</h2>
 
      {/* 🔥 Cash Prize Highlight */}
       <div
