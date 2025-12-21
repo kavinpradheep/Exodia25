@@ -29,7 +29,7 @@ export default function About() {
           transform: "scale(1.05)",
         }}
       >
-        🏆 Cash Prizes Worth <span style={{ color: "#B22222" }}>Around ₹25,000</span> to Grab!
+        🏆 Cash Prizes Worth <span style={{ color: "#B22222" }}>Around ₹20,000</span> to Grab!
       </div>
 
 
@@ -75,7 +75,10 @@ export default function About() {
               color: "#000",
             }}
           >
+            
             <FaClock size={28} color="#000" />
+
+            {/*
             <div>
               <strong>30-Hour Hackathon:</strong> Teams of 4 collaborate on real-world challenges with expert mentorship.
             </div>
@@ -92,6 +95,8 @@ export default function About() {
               boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
             }}
           >
+          */}
+
             <FaLaptopCode size={28} color="#00D4FF" />
             <div>
               <strong>Technical Events:</strong> Paper Presentation, ProCoder, Circuitrix, Core Clash

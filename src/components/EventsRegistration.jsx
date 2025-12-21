@@ -170,7 +170,8 @@ export default function EventsRegistration() {
         `}
       </style>
 
-      {/* --- Hackathon --- */}
+      {/* --- Hackathon Section (Commented Out) ---
+
       <div>
         <h3
           style={{
@@ -200,7 +201,6 @@ export default function EventsRegistration() {
             flexWrap: "wrap",
           }}
         >
-          {/*
 
           {renderEventCard(
             {
@@ -223,9 +223,6 @@ export default function EventsRegistration() {
             true
           )}
 
-          */}
-
-          {/* 🔥 Internship Highlight Card */}
           <div
             className="event-card"
             style={{
@@ -243,21 +240,19 @@ export default function EventsRegistration() {
             <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>🎯</div>
             <h4>Big Opportunity!</h4>
 
-            {/*
-
             <p style={{ fontSize: "1rem", marginTop: "0.5rem" }}>
               Winners have a{" "}
               <span style={{ color: "#B22222" }}>high chance</span> of landing{" "}
               <strong>Internships</strong> 🚀
             </p>
-
-            */}
-
             <p style={{ fontSize: "1rem", marginTop: "0.5rem", color: "#B22222" }}>Stay Tuned!!</p>
 
           </div>
         </div>
       </div>
+
+    */}
+      {/* --- Events Section --- */}
 
       <h2 style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>Events</h2>
       <p
@@ -268,7 +263,7 @@ export default function EventsRegistration() {
           fontWeight: "500",
         }}
       >
-        📅 Announcing Soon...
+        📅 January 3 2026
       </p>
 
       {/* --- Technical Events --- */}
@@ -284,6 +279,24 @@ export default function EventsRegistration() {
             gap: "2rem",
           }}
         >
+
+          {renderEventCard(
+            {
+              name: "Project Presentation",
+              description:
+                "Showcase your innovative projects in any domain (Software, Hardware, Core, Interdisciplinary). Top two teams will be awarded.",
+              participants: "2-4 members",
+              icon: "💡",
+              link: "#",
+              rules: [
+                "Time limit: 7 minutes per team.",
+                "Q&A for 3 minutes after presentation.",
+                "Bring your own laptops and required hardware.",
+                "Fees: Team of 2 - ₹150, Team of 3 - ₹200, Team of 4 - ₹250",
+              ],
+            },
+            "project"
+          )}
 
           {renderEventCard(
             {
@@ -403,23 +416,6 @@ export default function EventsRegistration() {
             "soulsync"
           )}
 
-          {renderEventCard(
-            {
-              name: "IPL Auction",
-              description:
-                "Strategy event where teams act as franchise owners and bid for players.",
-              participants: "2-3 members",
-              icon: "📱",
-              link: "#",
-              rules: [
-                "Virtual budget will be provided.",
-                "No exceeding the team size.",
-                "Auctioneer’s decision is final.",
-                "Fees : ₹60 per person",
-              ],
-            },
-            "iplauction"
-          )}
         </div>
       </div>
     </section>

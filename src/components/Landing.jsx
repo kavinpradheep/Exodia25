@@ -70,7 +70,7 @@ export default function Landing() {
           textAlign: "center",
         }}
       >
-        📅 Jan 03
+        📅 January 03 2026
       </p>
 
       <div
