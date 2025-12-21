@@ -99,7 +99,7 @@ export default function About() {
 
             <FaLaptopCode size={28} color="#00D4FF" />
             <div>
-              <strong>Technical Events:</strong> Paper Presentation, ProCoder, Circuitrix, Core Clash
+              <strong>Technical Events:</strong> Paper Presentation, Project Presentation, CodeUp, Circuitrix, Core Clash
             </div>
           </div>
 
@@ -116,7 +116,7 @@ export default function About() {
           >
             <FaUsers size={28} color="#FFAA00" />
             <div>
-              <strong>Non-Technical Events:</strong> Flash Clash, IPL Auction
+              <strong>Non-Technical Events:</strong> Flash Clash, Soul Sync
             </div>
           </div>
         </div>

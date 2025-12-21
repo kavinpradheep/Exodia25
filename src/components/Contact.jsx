@@ -130,10 +130,10 @@ export default function Contact() {
           onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
         >
           <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>
-            Tamilarasi. P
+            Abhinaya P S
           </h3>
-          <p style={{ margin: "0.3rem 0" }}>Executive Head</p>
-          <p style={{ margin: "0.3rem 0" }}>📞 9790615149</p>
+          <p style={{ margin: "0.3rem 0" }}>Treasurer</p>
+          <p style={{ margin: "0.3rem 0" }}>📞 8667235579</p>
         </div>
 
         {/* Card 4 */}
@@ -151,7 +151,7 @@ export default function Contact() {
           <h3 style={{ color: "#00D4FF", marginBottom: "0.5rem" }}>
             Kavin Pradheep S T
           </h3>
-          <p style={{ margin: "0.3rem 0" }}>Dept Coordinator (Developer)</p>
+          <p style={{ margin: "0.3rem 0" }}>Dept Coordinator<br/>(Developer)<br/></p>
           <p style={{ margin: "0.3rem 0" }}>📞 6369960824</p>
         </div>
       </div>

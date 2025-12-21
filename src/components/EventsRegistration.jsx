@@ -287,7 +287,7 @@ export default function EventsRegistration() {
                 "Showcase your innovative projects in any domain (Software, Hardware, Core, Interdisciplinary). Top two teams will be awarded.",
               participants: "2-4 members",
               icon: "💡",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "Time limit: 7 minutes per team.",
                 "Q&A for 3 minutes after presentation.",
@@ -305,7 +305,7 @@ export default function EventsRegistration() {
                 "Paper Presentation has three Categories (Software, Circuit, Core) - Each Category has Two Prizes.",
               participants: "2-3 members",
               icon: "📄",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "Time limit: 5 minutes per team.",
                 "Q&A for 2 minutes after presentation.",
@@ -322,7 +322,7 @@ export default function EventsRegistration() {
               description: "Coding competition to test problem-solving & logic.",
               participants: "Individual",
               icon: "💻",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "No plagiarism allowed.",
                 "Internet access is restricted.",
@@ -339,7 +339,7 @@ export default function EventsRegistration() {
               description: "Circuit debugging and electronics challenge.",
               participants: "2 members",
               icon: "🔌",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "Online Simulation.",
                 "Bring your own Laptop's.",
@@ -357,7 +357,7 @@ export default function EventsRegistration() {
                 "Design a 2D & 3D model in AutoCAD based on department domain.",
               participants: "Individual",
               icon: "📐",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "Theme will be announced on the spot.",
                 "No pre-made templates allowed.",
@@ -389,7 +389,7 @@ export default function EventsRegistration() {
               description: "Fast-paced quiz on technical & general knowledge.",
               participants: "2 members",
               icon: "❓",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "Prelims (written), followed by buzzer rounds.",
                 "Negative marking in finals.",
@@ -406,7 +406,7 @@ export default function EventsRegistration() {
               description: "A fun creativity + coordination event with surprise tasks.",
               participants: "2 members",
               icon: "🎭",
-              link: "#",
+              link: "https://forms.gle/9pFKzUrz768uddFN6",
               rules: [
                 "Multiple rounds (puzzles, role-plays, synchronization tasks).",
                 "Judging based on team coordination, creativity & clarity.",
