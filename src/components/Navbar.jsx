@@ -12,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { id: "landing", icon: <FaHome /> },
     { id: "about", icon: <FaInfoCircle /> },
-    { id: "sponsors", icon: <FaHandshake /> },
+  //  { id: "sponsors", icon: <FaHandshake /> },
     { id: "events", icon: <FaCalendarAlt /> },
     { id: "timeline", icon: <FaStream /> },
     { id: "contact", icon: <FaEnvelope /> },
